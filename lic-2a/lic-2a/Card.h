@@ -11,6 +11,7 @@ public:
 	int const getValue();
 	void setSuit(int suit);
 	void setValue(int value);
+	//overloaded print operator
 	friend std::ostream& operator<<(std::ostream& ostream, const Card& c);
 
 protected:
