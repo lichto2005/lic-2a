@@ -14,6 +14,6 @@ public:
 	//overloaded print operator
 	friend std::ostream& operator<<(std::ostream& ostream, const Card& c);
 
-protected:
+private:
 	int suit, value;
 };
