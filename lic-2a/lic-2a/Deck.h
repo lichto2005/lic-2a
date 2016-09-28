@@ -1,5 +1,4 @@
 #pragma once
-
 #include "Card.h"
 #include <list>
 
@@ -16,4 +15,3 @@ private:
 	// linked list of cards
 	std::list<Card> cards;
 };
-
