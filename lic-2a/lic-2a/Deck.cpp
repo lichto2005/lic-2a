@@ -6,9 +6,6 @@
 
 Deck::Deck()
 {
-	// init cards 2-A for each suit, catch domain errors if i, j out of bounds of acceptable input
-	try
-	{
 		// for each suit
 		for (int i = 0; i < 4; i++)
 		{
@@ -16,16 +13,16 @@ Deck::Deck()
 			for (int j = 2; j < 15; j++)
 			{
 				// create card i,j and add to cards list
-				cards.push_back(Card(i, j));
+				try
+				{
+					cards.push_back(Card(i, j));
+				}
+				catch (std::domain_error e)
+				{
+					std::cout << e.what();
+				}
 			}
 		}
-	}
-	// if card is out of range
-	catch (std::domain_error e)
-	{
-		// catch error and print to console
-		std::cout << e.what();
-	}
 }
 
 

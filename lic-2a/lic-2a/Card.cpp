@@ -14,13 +14,13 @@ Card::Card(int suit, int value)
 	// if suit out of bounds throw domain error
 	if (suit < 0 || suit > 3)
 	{
-		throw std::domain_error("Suit must be in range [0,3]");
+		throw std::domain_error("Suit must be in range [0,3]\n");
 		return;
 	}
 	// if value out of bounds throw domain error
 	if (value < 2 || value > 14)
 	{
-		throw std::domain_error("Value must be in range [2,14] (2-A)");
+		throw std::domain_error("Value must be in range [2,14] (2-A)\n");
 		return;
 	}
 
@@ -44,7 +44,7 @@ void Card::setSuit(int suit)
 	// throw domain error if out of bounds
 	if (suit < 0 || suit > 3)
 	{
-		throw std::domain_error("Suit must be in range [0,3]");
+		throw std::domain_error("Suit must be in range [0,3]\n");
 		return;
 	}
 	this->suit = suit;
@@ -55,7 +55,7 @@ void Card::setValue(int value)
 	// throw domain error if out of bounds
 	if (value < 2 || value > 14)
 	{
-		throw std::domain_error("Value must be in range [2,14] (2-A)");
+		throw std::domain_error("Value must be in range [2,14] (2-A)\n");
 		return;
 	}
 	this->value = value;
